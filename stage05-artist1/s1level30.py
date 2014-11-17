@@ -11,6 +11,8 @@ sys.path.append('..')
 import codestudio
 artist = codestudio.load('s1level30')
 
+artist.color = 'green'
+artist.right(90)
 # ???
 
 artist.check()
