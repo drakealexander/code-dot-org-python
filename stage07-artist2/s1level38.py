@@ -12,9 +12,9 @@ sys.path.append('..')
 import codestudio
 artist = codestudio.load('s1level38')
 
-for count2 in range(2):
+for count2 in range(360):
     artist.color = artist.colour_random()
-    for count in range(3):
+    for count in range(360):
         artist.move_forward(100)
         artist.turn_right(120)
     artist.turn_right(36)

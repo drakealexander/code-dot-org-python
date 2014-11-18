@@ -14,4 +14,9 @@ artist.color = 'red'
 
 # ???
 
+ 
+for count in range(4):
+    artist.forward(100)
+    artist.turn_right()
+     
 artist.check()

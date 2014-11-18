@@ -11,8 +11,9 @@ import codestudio
 artist = codestudio.load('s1level32')
 artist.speed = 'fastest'
 
-for count in range(25):                          # ???
-    artist.move_forward(1)
-    artist.turn_right(1)
+a = artist
+for count in range(360):                          # ???
+    a.move_forward(1)
+    a.turn_right(1)
 
-artist.check()
+a.check()
