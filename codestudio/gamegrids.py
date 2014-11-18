@@ -76,23 +76,26 @@ class XYGrid(UserList):
     def draw_line(self,line,value=1):
         (x1,y1,x2,y2) = [round(n) for n in line[0:4]]
         m = slope((x1,y1,x2,y2))
-        if m is None:                           # vertical line
-            if y1 <= y2:
-                for y in range(y1,y2+1):
-                    self.data[x1][y] = value
+        try:
+            if m is None:                           # vertical line
+                if y1 <= y2:
+                    for y in range(y1,y2+1):
+                        self.data[x1][y] = value
+                else:
+                    for y in range(y1,y2-1,-1):
+                        self.data[x1][y] = value
             else:
-                for y in range(y1,y2-1,-1):
-                    self.data[x1][y] = value
-        else:
-            b = y1 - (m*x1)
-            if x1 <= x2:
-                for x in range(x1,x2+1):
-                    y = round(m*x+b)
-                    self.data[x][y] = value
-            else:
-                for x in range(x1,x2-1,-1):
-                    y = round(m*x+b)
-                    self.data[x][y] = value
+                b = y1 - (m*x1)
+                if x1 <= x2:
+                    for x in range(x1,x2+1):
+                        y = round(m*x+b)
+                        self.data[x][y] = value
+                else:
+                    for x in range(x1,x2-1,-1):
+                        y = round(m*x+b)
+                        self.data[x][y] = value
+        except IndexError:
+            pass
 
     def draw_lines(self,lines,value=None):
         for line in lines:
