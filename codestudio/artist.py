@@ -64,6 +64,7 @@ class Artist():
             self.puzzle = proto.puzzle
             self.log = proto.log
             self.uid = proto.uid
+            self.title = proto.title
             self.type = proto.type
             self.x = proto.x
             self.y = proto.y 
@@ -78,6 +79,7 @@ class Artist():
             self.puzzle = []
             self.log = []
             self.uid = None
+            self.title = None
             self.type = 'artist'
             self.x = self.startx
             self.y = self.starty 
