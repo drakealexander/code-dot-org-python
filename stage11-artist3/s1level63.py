@@ -15,7 +15,11 @@ def draw_square(length):
     for count in range(4):
         zombie.move_forward(length)
         zombie.turn_right(90)
-
+ 
 draw_square(50)
+draw_square(60)
+draw_square(70)
+draw_square(80)
+draw_square(90)
 
 zombie.check()

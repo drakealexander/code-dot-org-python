@@ -9,7 +9,14 @@ import sys
 sys.path.append('..')
 import codestudio
 zombie = codestudio.load('s1level65')
-
+smallest = 25
+largest = 60
+by = 5
+def draw_bob( ):
+for counter in range(smallest, largest + 1, by):
+     zombie.right(90)
+  
+    
 # zombie.move_forward(25)
 # zombie.turn_right(90)
 # zombie.move_forward(30)

@@ -11,5 +11,7 @@ artist = codestudio.load('s1level40')
 artist.speed = 'slow'
 
 # ???
-
+for ccount in range(4):
+    artist.forward(20)
+    artist.right()
 artist.check()
