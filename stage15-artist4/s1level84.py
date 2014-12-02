@@ -19,6 +19,11 @@ def draw_triangle():
         z.move_forward(100)
         z.turn_right(120)
 
-# ???
+draw_triangle()
+ 
+z.forward(100)
+draw_square()
+z.forward(100)
+draw_triangle()
 
 z.check()

@@ -8,14 +8,15 @@ and your `draw_square()` function instead of the long way.
 import sys
 sys.path.append('..')
 import codestudio
-zombie = codestudio.load('s1level65')
-smallest = 25
-largest = 60
-by = 5
-def draw_bob( ):
-for counter in range(smallest, largest + 1, by):
-     zombie.right(90)
-  
+artist = codestudio.load('s1level65')
+def draw_bob():
+      for length in range(25,61,5):
+           artist.forward(length)
+           artist.right(90)
+      
+     
+
+draw_bob() 
     
 # zombie.move_forward(25)
 # zombie.turn_right(90)
@@ -33,5 +34,4 @@ for counter in range(smallest, largest + 1, by):
 # zombie.turn_right(90)
 # zombie.move_forward(60)
 # zombie.turn_right(90)
-
-zombie.check()
+artist.check()
