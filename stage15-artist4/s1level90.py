@@ -21,8 +21,18 @@ def draw_triangle(length):
         z.turn_right(120)
 
 def draw_house(length):
-    pass
+    draw_square(length)
+    z.move_forward(length)
+    z.turn_right(30)
+    draw_triangle(length)
+    z.right(60)
+    z.forward(length)
+    z.right(90)
+    z.forward(length)
+    z.right(180)
 
-# ???
+draw_house(50)
+draw_house(100)
+draw_house(150)
 
 z.check()
